@@ -1,0 +1,16 @@
+<h2>List of articles: </h2>
+
+<table>
+	<th>
+		<td>create</td>
+		<td>title</td>
+		<td>text</td>
+	</th>
+	<% @list_of_articles.each do |art| %>
+		<tr>
+			<td> <%= art.created_at %> </td>
+			<td> <%= art.title %> </td>
+			<td> <%= art.text %> </td>
+		</tr>
+	<% end %>	
+</table>
