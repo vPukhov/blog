@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'static_pages/about'
+
+  get 'static_pages/terms'
+
   get 'home/index'
 
   # get 'contacts' => 'contacts#new'
