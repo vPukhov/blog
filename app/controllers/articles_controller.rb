@@ -12,7 +12,8 @@ class ArticlesController < ApplicationController
 
     if @article.valid?
       @article.save
-      render action: 'index'
+
+      redirect_to action: 'index'
     else
       render action: 'new'
     end
