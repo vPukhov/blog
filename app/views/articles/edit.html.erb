@@ -1,0 +1,29 @@
+<h1>Edit article</h1>
+
+<%= form_for :article, url: article_path(@article), method: :put do |f| %>
+	
+	<% if @article && @article.errors.any? %>
+
+		<ul>
+		<% @article.errors.full_messages.each do |message| %>
+			<li> <%= message %> </li>
+		<% end %>
+		</ul>
+
+	<% end %>
+
+	<p>	
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+	</p>
+
+	<p>	
+		<%= f.label :text %>
+		<%= f.text_area :text %>
+	</p>
+
+	<p>
+		<%= f.submit %>
+	</p>
+
+<% end %>

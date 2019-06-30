@@ -8,7 +8,8 @@
 				create <%= art.created_at %>
 			</span>
 			<h2 class="title_post"> 
-				<a href="/articles/<%= art.id%>"> <%= art.title %> </a>
+				<!-- <a href="/articles/<%= art.id%>"> <%= art.title %> </a> -->
+				<%= link_to art.title, article_path(art) %>
 			</h2>
 		</header>
 
@@ -16,7 +17,12 @@
 			<p class="text_post">
 				<%= art.text %>	
 			</p>
+
+			<p>
+				<%= link_to 'edit', edit_article_path(art) %>
+			</p>
 		</div>
+
 	</article>
 
 <% end %>	
