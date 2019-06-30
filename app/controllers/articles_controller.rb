@@ -19,6 +19,10 @@ class ArticlesController < ApplicationController
 
   end
 
+  def show
+    render plain: params[:id]
+  end
+
   private
 
   def article_params

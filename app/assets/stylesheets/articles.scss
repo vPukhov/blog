@@ -1,3 +1,25 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+
+.bottom_border {
+	border-bottom: 2px dashed #3A0303;
+	width: 600px;
+}
+
+.post_time {
+	color: #888888;
+	font-family: Arial;
+	font-size: 10px;
+}
+
+.title_post {
+	font-family: 'Permanent Marker', cursive;
+	margin: 0;
+}
+
+.text_post {
+	width: 600px;
+}
