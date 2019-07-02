@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+
   get 'about' => 'static_pages#about'
   get 'terms' => 'static_pages#terms'
 
@@ -9,7 +9,10 @@ Rails.application.routes.draw do
   # resource :contacts, only: [:create]
 
   resource :contacts, only: [:new, :create], path_names: { :new => '' }
-  resources :articles
+  
+  resources :articles do
+    resources :comments, only: [:create]
+   end 
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
