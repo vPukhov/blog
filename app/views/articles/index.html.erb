@@ -19,7 +19,8 @@
 			</p>
 
 			<p>
-				<%= link_to 'edit', edit_article_path(art) %>
+				<%= link_to 'edit', edit_article_path(art) %> |
+				<%= link_to 'delete', art,  :method => :delete, :confirm => "You sure?" %>
 			</p>
 		</div>
 
