@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
 
+  before_action :authenticate_user!
+
   def index
     @list_of_articles = Article.all.order(created_at: :desc)
   end
