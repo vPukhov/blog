@@ -18,10 +18,12 @@
 				<%= art.text %>	
 			</p>
 
-			<p>
-				<%= link_to 'edit', edit_article_path(art) %> |
-				<%= link_to 'delete', article_path(art),  :method => :delete,  data: { confirm: 'Are you sure?' }%>
-			</p>
+			<% if art.username == current_user.username %>	
+				<p>
+					<%= link_to 'edit', edit_article_path(art) %> |
+					<%= link_to 'delete', article_path(art),  :method => :delete,  data: { confirm: 'Are you sure?' }%>
+				</p>
+			<% end %>
 		</div>
 
 	</article>

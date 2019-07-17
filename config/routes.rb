@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'about' => 'static_pages#about'
   get 'terms' => 'static_pages#terms'
 
-  get 'home/index'
+  get 'home/index' => 'articles#index'
 
   # get 'contacts' => 'contacts#new'
   # resource :contacts, only: [:create]
