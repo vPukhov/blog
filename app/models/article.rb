@@ -3,4 +3,8 @@ class Article < ApplicationRecord
   validates :text, presence: true
 
   has_many :comments
+
+  def subject
+    title
+  end
 end
