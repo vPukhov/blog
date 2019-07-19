@@ -1,17 +1,3 @@
-require 'rails_helper'
-
-feature "Account creation" do
-  
-  scenario "allows guest to create account" do
-    
-    sign_up
-
-    expect(page).to have_content 'List of articles'
-
-  end  
-
-end
-
 def sign_up
   visit new_user_registration_path
 
@@ -21,4 +7,4 @@ def sign_up
   fill_in :user_password_confirmation, with: 'qwerty'
 
   click_button 'Sign up'
-end  
+end
