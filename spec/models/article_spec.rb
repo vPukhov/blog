@@ -29,6 +29,12 @@ describe Article do
 
       expect(article.last_comment).to eq "comment body 3"
     end  
+  end
+
+  describe "validate of length" do
+    # проверка максимальной длины поля
+    it { should validate_length_of(:title).is_at_most(140) }
+    it { should validate_length_of(:text).is_at_most(4000) }
   end  
 
 end
